@@ -343,7 +343,7 @@ tibble(
 
 **Prompt (3–4 sentences):** Which strategy better approximated the population mean and SD for your response variable? Why might stratification help (or not) here?
 
-> *Stratifying by month seemed to be a better way to get the mean and sd for my response variable because the most important factor in air temperature is season. * 
+> *Stratifying by month seemed to be a better way to get the mean and sd for my response variable because the most important factor in air temperature is season. Additionally, there was less variance in the summer months whereas the winter months tended to have more outliers, so stratifying by month may help reduce the effectiveness of these outliers. The random sampling could over select samples from certain seasons or months, which would skew the mean and SD. * 
 
 ---
 
@@ -356,7 +356,7 @@ Answer in **4–6 sentences**:
 - In EAES field studies, when is stratification essential?
 - What is one trade-off of stratified sampling?
 
-> *Write your answer here.*
+> *Seasonality is important for sampling because for environmental datasets, the season can have large effects on the values of variables, therefore seasonality must be controlled for when doing analysis. If seasonality is ignored, this can result in unrepresentative samples. Stratification is therefore essential in EAES fields where ecologic, hydrologic, and atmospheric systems can all be greatly affected by systems. The issue with stratifying is it requires previous knowledge to stratify in a useful manner. For example, temperature can be controlled for by stratifying by month since we know that temperatures and month fluctuate together. *
 
 ---
 
