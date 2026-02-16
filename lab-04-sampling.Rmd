@@ -214,7 +214,7 @@ df %>%
 
 **Prompt (3–4 sentences):** Which grouping variable (month or day/night) seems to explain more variability in your response? Why?
 
-> *The box plots in the monthly grouping seemed to do better than the day/night grouping. This makes sense since temperature variation can be more extreme between January and July than it would be for day-night cycles. For example, the *
+> *The box plots in the monthly grouping seemed to do better than the day/night grouping. This makes sense since temperature variation can be more extreme between January and July than it would be for day-night cycles. For example, the daytime range was ~60 degrees whereas the monthly ranges where no more than ~40 degrees*
 
 ---
 
@@ -271,7 +271,7 @@ tibble(
 ```{r sampling_distribution, echo=TRUE, eval=FALSE}
 set.seed(480)
 
-reps <- 1000   # TODO: choose number of replicates (e.g., 500 or 1000)
+reps <- 12000   # TODO: choose number of replicates (e.g., 500 or 1000)
 
 means <- replicate(
   reps,
@@ -295,8 +295,7 @@ ggplot(tibble(mean_est = means), aes(mean_est)) +
 
 **Prompt (2–3 sentences):** Is the sampling distribution centered on the population mean? What happens if you increase `n_samp`?
 
-> *Write your answer here.*
-
+> *the sampling distribution looks like it's close to the population mean. As n_samp increases, the closer the sample mean becomes to the population mean and the distribution begins to look more normal. *
 ---
 
 # Section 5 — Stratified sampling
@@ -344,7 +343,7 @@ tibble(
 
 **Prompt (3–4 sentences):** Which strategy better approximated the population mean and SD for your response variable? Why might stratification help (or not) here?
 
-> *Write your answer here.*
+> *Stratifying by month seemed to be a better way to get the mean and sd for my response variable because the most important factor in air temperature is season. * 
 
 ---
 
