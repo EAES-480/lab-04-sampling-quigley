@@ -390,7 +390,7 @@ All exercises below should run using the same objects from Part I:
 ```{r systematic_sampling, echo=TRUE, eval=FALSE}
 # GOAL: Create a systematic sample and compare mean/sd to population.
 # TODO: choose an interval k (try 48, 24, 96).
-k <- ___
+k <- 24 # every 12 hours to capture diurnal cycle
 
 sys_samp <- df %>%
   # TODO: keep only non-missing response values
@@ -411,7 +411,7 @@ tibble(
 **Prompt (3–4 sentences):** Did systematic sampling approximate the population mean/SD better or worse than SRS?  
 What cycle (daily or seasonal) might be interacting with your chosen `k`?
 
-> *Write your answer here.*
+> *My cycle is diurnal to capture daytime and nighttime conditions. the sample mean was acutally futher away to the population mean than the SRS. This is surprising to me as I thought capturing the temperature twice daily would be pretty close to the mean, however, when I tried with either 6 or 96 hours, the mean was much closer. *
 
 ---
 
