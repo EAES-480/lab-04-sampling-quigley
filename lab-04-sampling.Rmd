@@ -26,6 +26,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+> GM GRADE 8.5/10 - Good effort with some good observations on seasonality and daily cycles. However, there were some missing responses (data dictionary) and slight mis-interpretations.
+
 # Overview
 
 ## What is AmeriFlux?
@@ -120,6 +122,8 @@ df %>% summarise(
 
 > *I chose gpp because it represents plant vigor and should closely respond to season and day-night changes. During winter, it should be pretty clear that there is little vegetation activity, whereas it will be obvious in summer when there is lots of photosynthesis. *
 
+> GM: -0.5 You wrote that you chose `gpp` but then used `ta` (air temperature) in all the code and plots. This inconsistency made several sections confusing.
+
 ---
 
 # Section 1 — Data dictionary (conceptual)
@@ -136,6 +140,8 @@ Fill in at least **5 variables** from this dataset:
 |          |       |             |                            |
 |          |       |             |                            |
 |          |       |             |                            |
+
+> GM: -0.5 The data dictionary is completely empty. You need to fill in at least 5 variables with units, descriptions, and expected seasonality as instructed.
 
 ---
 
@@ -163,6 +169,8 @@ df %>%
 **Prompt (2–3 sentences):** What major patterns do you see? (Seasonal cycle? Daily cycle? Outliers?)
 
 > *There appears to be a clear seasonal cycle where it gets warmer in summer and cools in winter. There was some -9999 daytime values that had to be filtered out. *
+
+> GM: -0.25 You noted the seasonal cycle but the response is incomplete — you should also comment on the daily cycle and any outliers or gaps (you even mentioned filtering -9999 values).
 
 ---
 
@@ -263,6 +271,8 @@ tibble(
 **Prompt (2–3 sentences):** How close is your one-sample estimate to the population mean/SD? Is the difference surprising?
 
 > *Choosing a sample size of 10,000, I expected a closer sample mean to the population mean, however my sample mean was still ~0.06 off. It is interesting that the sample mean tends to underestimate the population mean. *
+
+> GM: -0.25 With a large sample size (n=1000) the sample mean should be very close to the population mean. A difference of 0.06 is small and expected due to sampling variability.
 
 ---
 
@@ -413,6 +423,8 @@ What cycle (daily or seasonal) might be interacting with your chosen `k`?
 
 > *My cycle is diurnal to capture daytime and nighttime conditions. the sample mean was acutally futher away to the population mean than the SRS. This is surprising to me as I thought capturing the temperature twice daily would be pretty close to the mean, however, when I tried with either 6 or 96 hours, the mean was much closer. *
 
+> GM: Systematic sampling interacted with the daily cycle depending on your choice of `k`. This is a common issue with time series data.
+
 ---
 
 ## Exercise 2 — Cluster sampling (sample days, take all points within those days)
@@ -454,6 +466,8 @@ tibble(
 What feature of time series data (hint: autocorrelation) is relevant here?
 
 > *The cluster sampling can have higher variance than SRS because across several days, the min and max values can change significantly. Observations from within a single day may be more likely to be correlated to one another (autocorrelation) rather than them being independent measurements. By sampling entire weeks, it may capture a wider range of the temperature values across time. *
+
+> GM: Solid explanation — autocorrelation within days reduces independent information and can increase variance.
 
 ---
 
